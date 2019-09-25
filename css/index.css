@@ -1,1 +1,325 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+/* Website Variables DO NOT DELETE IN (LESS) */
+/* Website Variables [END] */
+/* nav bar css */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+  margin-top: 2rem;
+}
+.navbar a {
+  text-decoration: none;
+  margin-left: 3rem;
+  color: #262626;
+  font-family: 'Mansalva', cursive;
+  font-size: 21px;
+}
+.navbar :hover {
+  color: red;
+}
+/* nav bar css [END] */
+.img-top-home {
+  background-image: url(https://images.pexels.com/photos/2962010/pexels-photo-2962010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  max-width: 100%;
+  height: 20rem;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-top: 1.5rem;
+}
+.img-top-home h1 {
+  font-size: 60px;
+  color: whitesmoke;
+  text-align: center;
+  position: relative;
+  top: 8rem;
+}
+.img-top-home p {
+  font-size: 18px;
+  color: whitesmoke;
+  text-align: center;
+  position: relative;
+  top: 8rem;
+}
+/* About / Skills Section (includes skill bars).*/
+.middle-content {
+  margin-top: 1.5rem;
+}
+.middle-content h1 {
+  font-size: 28px;
+  margin-bottom: 0.8rem;
+}
+.flex-container-middle {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+.flex-container-middle .box-sidebar {
+  background: #d4d4d4;
+  max-width: 25%;
+  padding: 1.5rem;
+}
+.flex-container-middle .box-sidebar h1 {
+  color: black;
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+.flex-container-middle .box-skills {
+  margin-left: 2rem;
+  width: 100%;
+}
+.flex-container-middle .skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+.flex-container-middle .container {
+  background-color: #ddd;
+  /* Grey background */
+}
+.flex-container-middle .container .html {
+  width: 90%;
+  background: #262626;
+}
+.flex-container-middle .container .css {
+  width: 50%;
+  background-color: #2196F3;
+}
+.flex-container-middle .container .js {
+  width: 10%;
+  background: red;
+}
+.flex-container-middle .container .php {
+  width: 5%;
+  background: palevioletred;
+}
+/* About / Skills Section (includes skill bars). [END]*/
+/* Work History Section*/
+/*Used mixins here example #1 */
+.bottom-content {
+  margin-top: 1.5rem;
+}
+.bottom-content h1 {
+  font-size: 28px;
+  margin-bottom: 0.8rem;
+}
+.bottom-content .flex-container-bottom {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+.bottom-content .flex-container-bottom .box-sidebar {
+  background: #d4d4d4;
+  max-width: 25%;
+  padding: 1.5rem;
+}
+.bottom-content .flex-container-bottom .box-sidebar h1 {
+  color: black;
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+.bottom-content .flex-container-bottom .box-skills {
+  margin-left: 2rem;
+  width: 100%;
+}
+.bottom-content .flex-container-bottom .skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+.bottom-content .flex-container-bottom .container {
+  background-color: #ddd;
+  /* Grey background */
+}
+.bottom-content .flex-container-bottom .container .html {
+  width: 90%;
+  background: #262626;
+}
+.bottom-content .flex-container-bottom .container .css {
+  width: 50%;
+  background-color: #2196F3;
+}
+.bottom-content .flex-container-bottom .container .js {
+  width: 10%;
+  background: red;
+}
+.bottom-content .flex-container-bottom .container .php {
+  width: 5%;
+  background: palevioletred;
+}
+.bottom-content .flex-container-bottom .box {
+  margin-right: 1.5rem;
+}
+.bottom-content p {
+  font-size: 21px;
+}
+/*Used mixins here example #1 END*/
+.navbar-footer {
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+  margin-top: 2rem;
+  background: #262626;
+  height: 3rem;
+}
+.navbar-footer a {
+  text-decoration: none;
+  margin-left: 3rem;
+  color: #262626;
+  font-family: 'Mansalva', cursive;
+  font-size: 21px;
+}
+.navbar-footer :hover {
+  color: red;
+}
+.navbar-footer a {
+  color: whitesmoke;
+  margin-top: 1rem;
+  margin-top: 0.7rem;
+}
+@media (max-width: 500px) {
+  .flex-container-middle .box-sidebar {
+    max-width: 50%;
+  }
+}

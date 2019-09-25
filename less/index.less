@@ -54,6 +54,173 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+body {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+/* Website Variables DO NOT DELETE IN (LESS) */
+@text-color-img:whitesmoke;
+@h1-main-color: black;
+@p-main-color: grey;
+@p-text-size: 18px;
+@content-bg: whitesmoke;
+@sidebar-home-bg: #d4d4d4;
+@sidebar-h1-size: 28px;
+@nav-font-color: #262626;
+@nav-font-family: 'Mansalva', cursive;
+@nav-font-size: 21px;
+@h1-size-img: 60px; 
+@h1-main-text-size: 30px;
+
+
+/* Website Variables [END] */
+
+/* nav bar css */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+	flex-flow: row wrap;
+	margin-top: 2rem;
+	
+	a {
+		text-decoration: none;
+		margin-left: 3rem;
+		color: @nav-font-color;
+		font-family: @nav-font-family;
+		font-size: @nav-font-size;
+	}
+	:hover{
+		color:red;
+	}
+}
+
+/* nav bar css [END] */
+
+.img-top-home {
+	background-image: url(https://images.pexels.com/photos/2962010/pexels-photo-2962010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    max-width: 100%;
+    height: 20rem;
+    background-size: cover;
+    background-attachment: fixed;
+	margin-top: 1.5rem;
+	
+	h1 {
+		font-size: 60px;
+		color: whitesmoke;
+		text-align: center;
+		position: relative;
+		top: 8rem;
+	}
+
+	p {
+		font-size: @p-text-size;
+		color: @text-color-img;
+		text-align: center;
+		position: relative;
+		top: 8rem;
+	}
+}
+
+/* About / Skills Section (includes skill bars).*/
+
+.middle-content {
+	margin-top: 1.5rem;
+	
+	h1 {
+		font-size: @sidebar-h1-size;
+		margin-bottom: 0.8rem;
+	}
+}
+
+.flex-container-middle{
+	display: flex;
+    flex-flow: row nowrap;
+	justify-content: flex-start;
+	
+	.box-sidebar{
+		background: @sidebar-home-bg;
+		max-width: 25%;
+		padding: 1.5rem;
+
+		h1{
+			color: black;
+			font-size: @h1-main-text-size;
+			margin-bottom: 1rem;
+		}
+	}
+
+	.box-skills{
+		margin-left: 2rem;
+		width: 100%;
+	}
+
+	.skills {
+		text-align: right; 
+		padding-top: 10px;
+		padding-bottom: 10px;
+		color: white;	
+	}
+
+	.container {
+		background-color: #ddd; /* Grey background */
+		.html {
+			width: 90%;
+			background: @nav-font-color;
+		}
+		.css {
+			width: 50%; 
+			background-color: #2196F3;
+		}
+		.js {
+			width: 10%;
+			background: red;
+		}
+		.php {
+			width: 5%;
+			background:palevioletred;
+		}
+	
+	}
+
+}
+
+/* About / Skills Section (includes skill bars). [END]*/
+
+/* Work History Section*/
+/*Used mixins here example #1 */
+.bottom-content {
+	.middle-content();
+	.flex-container-bottom {
+		.flex-container-middle();
+	.box {
+		margin-right: 1.5rem;
+	}
+  }
+	p {
+		font-size: @nav-font-size;
+	}
+}
+/*Used mixins here example #1 END*/
+
+.navbar-footer{
+	.navbar();
+	background: @nav-font-color;
+	height: 3rem;
+	a{
+		color: @text-color-img;
+		margin-top: 1rem;
+		margin-top: 0.7rem;
+	}
+}
+
+@media (max-width:500px){
+	.flex-container-middle {
+		.box-sidebar{
+			max-width: 50%;
+		}
+	  }
+}
